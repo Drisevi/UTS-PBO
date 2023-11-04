@@ -1,0 +1,33 @@
+import java.util.Scanner;
+
+class Lingkaran {
+    protected double jariJari;
+
+    public Lingkaran(double jariJari) {
+        this.jariJari = jariJari;
+    }
+
+    public double hitungLuas() {
+        return Math.PI * jariJari * jariJari;
+    }
+
+    public double hitungKeliling() {
+        return 2 * Math.PI * jariJari;
+    }
+}
+
+public class HitungLingkaran4 {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Masukkan jari-jari lingkaran (cm) : ");
+        double jariJari = input.nextDouble();
+
+        Lingkaran lingkaran = new Lingkaran(jariJari);
+
+        System.out.println("Luas lingkaran (cm2) : " + lingkaran.hitungLuas());
+        System.out.println("Keliling lingkaran (cm) : " + lingkaran.hitungKeliling());
+
+        input.close();
+    }
+}
